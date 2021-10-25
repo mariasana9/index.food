@@ -78,17 +78,12 @@ button {
   font-size: 8px;
   line-height: 9px;
   color: #000000;
-  /* text-decoration: none; */
 }
+/* slider  */
 .slide {
-  /* background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.43) 40.45%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    url(.png); */
   display: flex;
   align-items: center;
+  padding: 100px;
   border-radius: 20px;
   min-height: 400px;
   overflow: hidden;
@@ -108,8 +103,44 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.slide-autumn {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.43) 40.45%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/autumn.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-vitamins {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.43) 40.45%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/vitamins.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .slide-content {
   max-width: 400px;
+}
+.swiper {
+  position: relative;
+}
+.slider-buttons {
+  position: absolute;
+  right: 46px;
+  bottom: 40px;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-between;
+}
+.slider-button {
+  cursor: pointer;
 }
 .slide-title {
   font-weight: bold;
@@ -229,10 +260,13 @@ button {
 }
 .delivery-card {
   position: relative;
+  /* flex: 50%; */
+
   margin: 15px;
   width: 275px;
   height: 182px;
   border-radius: 18px;
+
   overflow: hidden;
 }
 .delivery-img {
@@ -378,12 +412,12 @@ button {
 }
 .advantages-cards {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin: -37px;
 }
 .advantages-card {
   text-align: center;
-  flex: 25%;
+  flex: 20%;
   max-width: 270px;
   overflow: hidden;
   background-color: #fff;
@@ -432,4 +466,58 @@ button {
 }
 .social-link {
   margin-left: 20px;
+}
+
+@media (max-width: 1260px) {
+  .container {
+    max-width: 900px;
+  }
+  .search-form {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .tabs-content {
+    flex-wrap: wrap;
+  }
+  .tabs-card {
+    flex: 50%;
+    max-width: calc(50% - 30px);
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+  .slide {
+    padding: 70px;
+  }
+  .delivery-card {
+    width: calc(50% - 30px);
+  }
+  .footer-logo {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .search-form {
+    order: 5;
+    margin: 15px 0px 15px 0px;
+  }
+  .promo {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
+  .tabs-card {
+    max-width: 100%;
+  }
 }
